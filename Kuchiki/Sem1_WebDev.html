@@ -1,12 +1,15 @@
+<!-- 
+Um die Pfeil Datein zu aktualisieren hatte ich leider keine Zeit mehr :')
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semester1_WD</title>
-    <link rel="stylesheet" href="stylekuchiki.css">
-    <script src="contactsection.js"></script>
-
+    <link rel="stylesheet" href="stylekuchiki.css"> <!-- Visuals of the Website -->
+    <script src="interactionskuchiki.js"></script> <!-- makes Website interactive; for contact form below-->
 </head>
 
 <body>
@@ -14,9 +17,10 @@
     <!-- HEADER -->
     <!-- -------------------------- -->
     <header id="site-header">
-        <img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
+        <a href="#home"><img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60"
+                class="logo"></a>
         <nav id="main-nav" aria-label="Main navigation">
-            <ul>
+            <ul id="navigation-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#appearance">Appearance</a></li>
@@ -33,14 +37,15 @@
     <main id="content">
 
         <!-- -------------------------- -->
-        <!-- START PAGE -->
+        <!-- HOME PAGE -->
         <article id="home">
             <header>
                 <h1>Byakuya</h1>
                 <h2>Kuchiki</h2>
-                <p>Ikuzo!</p>
-                <img src="Images/MainPage/DownArrow_White.png" alt="Down Arrow"> 
-                <img src="Images/MainPage/MainPage_Byakuya.jpg" alt="Background Image of Byakuya"> <!-- background hero image -->
+                <div id="home-text">
+                    <p>Ikuzo!</p>
+                    <img src="Images/MainPage/DownArrow_White.png" alt="Down Arrow">
+                </div>
             </header>
         </article>
 
@@ -48,70 +53,79 @@
         <!-- ABOUT SECTION -->
         <article id="about">
             <header>
-                <img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
-                <h1>About Byakuya</h1>
-                <img src="Images/About/About_Byakuya.jpg" alt="Image of Byakuya">
+                <a href="#home"><img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60"
+                        height="60" class="logo"></a>
             </header>
-            <section>
-                <p>Byakuya Kuchiki is a fictional character from the anime and manga series "Bleach" created by Tite Kubo.  
-                He is a highly respected and powerful character in the series, often portrayed as a stoic and disciplined individual who values honor and duty above all else.</p>
-                <table border="2">
-                    <tr>
-                        <th>Name</th>
-                        <th>Byakuya Kuchiki</th>
-                    </tr>
-                    <tr>
-                        <th>Species</th>
-                        <th>Human</th>
-                    </tr>
-                    <tr>
-                        <th>Birthday</th>
-                        <th>January 31st</th>
-                    </tr>
-                    <tr>
-                        <th>Height</th>
-                        <th>180 cm</th>
-                    </tr>
-                    <tr>
-                        <th>Weight</th>
-                        <th>64 kg</th>
-                    </tr>
-                </table>
+
+            <section id="left-side-image">
+                <img src="Images/About/About_Byakuya.jpg" alt="Image of Byakuya">
             </section>
 
-            <section>
-                <table border="2">
-                    <tr>
-                        <th rowspan="3">Affiliation</th>
-                        <th>Gotei 13</th>
-                    </tr>
-                    <tr>
-                        <th>Soul Society</th>
-                    </tr>
-                    <tr>
-                        <th>Kuchiki Clan</th>
-                    </tr>
-                    <tr>
-                        <th>Profession</th>
-                        <th>Shinigami</th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">Position</th>
-                        <th>Captain of Squad 6</th>
-                    </tr>
-                    <tr>
-                        <th>28th Head of the Kuchiki Clan</th>
-                    </tr>
-                </table>
-                <p>Professional Status</p>
-            </section> 
+            <section id="right-side-content">
+                <h1>About Byakuya</h1>
+                <p>Byakuya Kuchiki is a fictional character from the anime and manga series "Bleach" created by Tite
+                    Kubo.
+                    He is a highly respected and powerful character in the series, often portrayed as a stoic and
+                    disciplined individual who values honor and duty above all else.</p>
+                <div id="tables">
+                    <table border="2">
+                        <tr>
+                            <th>Name</th>
+                            <td>Byakuya Kuchiki</td>
+                        </tr>
+                        <tr>
+                            <th>Species</th>
+                            <td>Human</td>
+                        </tr>
+                        <tr>
+                            <th>Birthday</th>
+                            <td>January 31st</td>
+                        </tr>
+                        <tr>
+                            <th>Height</th>
+                            <td>180 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>64 kg</td>
+                        </tr>
+                    </table>
+
+                    <table border="2">
+                        <tr>
+                            <th rowspan="3">Affiliation</th>
+                            <td>Gotei 13</td>
+                        </tr>
+                        <tr>
+                            <td>Soul Society</td>
+                        </tr>
+                        <tr>
+                            <td>Kuchiki Clan</td>
+                        </tr>
+                        <tr>
+                            <th>Profession</th>
+                            <td>Shinigami</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Position</th>
+                            <td>Captain of Squad 6</td>
+                        </tr>
+                        <tr>
+                            <td>28th Head of the Kuchiki Clan</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
         </article>
 
         <!-- -------------------------- -->
         <!-- QUOTE_1 SECTION -->
-        <article id="quote1">
+        <article id="quote1" class="quote">
             <blockquote cite="https://www.ranker.com/list/best-byakuya-kuchiki-quotes/ranker-anime">
-                <p>"Let me tell you about the difference between you and me. It's like the story of the monkey trying to capture the moon. However close he thinks he is to the moon, it's still just the reflection of the moon in the middle of the lake. No matter how he struggles to capture that "moon", he inevitably sinks to the bottom of that lake to no avail. You will never reach me."</p>
+                <p>"Let me tell you about the difference between you and me. It's like the story of the monkey trying to
+                    capture the moon. However close he thinks he is to the moon, it's still just the reflection of the
+                    moon in the middle of the lake. No matter how he struggles to capture that "moon", he inevitably
+                    sinks to the bottom of that lake to no avail. You will never reach me."</p>
             </blockquote>
         </article>
 
@@ -119,155 +133,206 @@
         <!-- APPEARANCE SECTION -->
         <article id="appearance">
             <header>
-                <img src="Images/Appearance/SakuraIcon_Black.png" alt="Sakura Logo Black" width="60" height="60">
-                <h1>Appearance</h1>
+                <a href="#home"><img src="Images/Appearance/SakuraIcon_Black.png" alt="Sakura Logo Black" width="60"
+                        height="60" class="logo"></a>
             </header>
 
-            <section>
-                <img src="Images/Appearance/Appearance_KuchikiFull.png" alt="Full Image of Byakuya">    <!-- Full image of Byakuya in the center -->
+            <div id="app-grid">
+                <div id="app-column-1">
+                    <div class="app-text-box">
+                        <h2>Kenseikan</h2>
+                        <p>Byakuyas Head piece.
+                            He wears three on top of his head and two additionally on the side of his head.
+                            They symbolize nobility and his status as head of the Kuchiki clan.</p>
+                    </div>
 
-                <img src="Images/Appearance/Appearance_HeadPiece.png" alt="Head Piece">                 <!-- Only Headpieces cut out; placed on top of the full image to highlight later on -->
-                <img src="Images/Appearance/Appearance_Scarf.png" alt="Scarf">                          <!-- Only Scarf cut out; placed on top of the full image to highlight later on -->
-                <img src="Images/Appearance/Appearance_Shikai.png" alt="Shikai">                        <!-- Only Shikai (Cherry Blossoms) cut out; placed on top of the full image to highlight later on -->
-                <img src="Images/Appearance/Appearance_Senpakuto.png" alt="Senpakuto Handle">           <!-- Only Senpakuto Handle cut out; placed on top of the full image to highlight later on -->
-                <img src="Images/Appearance/Appearance_Coat.png" alt="Coat">                            <!-- Only Coat/Haori cut out; placed on top of the full image to highlight later on -->
-            </section>
+                    <div class="app-text-box">
+                        <h2>White Scarf</h2>
+                        <p>Byakuyas scarf was tailored by the master weaver
+                            Tsujishirō Kuroemon III.
+                            It is made from Ginpaku Kazahana no Usuginu
+                            and embodies a family heirloom, that is passed down
+                            to the heads of the clan from generation to generation.</p>
+                    </div>
+                </div>
 
-            <section>
-                <h2>Kenseikan</h2>
-                <p>Byakuyas Head piece.
-                He wears three on top of his head and two additionally on the side of his head.
-                They symbolize nobility and his status as head of the Kuchiki clan.</p>
-            </section>
+                <div id="app-column-2">
+                    <div id="image-container">
+                        <img class="base-image" src="Images/Appearance/Appearance_KuchikiFull.png"
+                            alt="Full Image of Byakuya"> <!-- Full image of Byakuya in the center -->
 
-            <section>
-                <h2>White Scarf</h2>
-                <p>Byakuyas scarf was tailored by the master weaver 
-                Tsujishirō Kuroemon III. 
-                It is made from Ginpaku Kazahana no Usuginu 
-                and embodies a family heirloom, that is passed down 
-                to the heads of the clan from generation to generation.</p>
-            </section>
+                        <!-- <img id="app-head-piece" src="Images/Appearance/Appearance_HeadPiece.png" alt="Head Piece">                 Only Headpieces cut out; placed on top of the full image to highlight later on -->
+                        <!-- <img id="app-scarf" src="Images/Appearance/Appearance_Scarf.png" alt="Scarf">                          Only Scarf cut out; placed on top of the full image to highlight later on -->
+                        <!-- <img id="app-shikai" src="Images/Appearance/Appearance_Shikai.png" alt="Shikai">                        Only Shikai (Cherry Blossoms) cut out; placed on top of the full image to highlight later on -->
+                        <!-- <img id="app-senpakuto" src="Images/Appearance/Appearance_Senpakuto.png" alt="Senpakuto Handle">           Only Senpakuto Handle cut out; placed on top of the full image to highlight later on -->
+                        <!-- <img id="app-coat" src="Images/Appearance/Appearance_Coat.png" alt="Coat">                            Only Coat/Haori cut out; placed on top of the full image to highlight later on -->
+                    </div>
+                </div>
 
-            <section>
-                <h2>Captain Haori</h2>
-                <p>On top of his regular Shinigami Shihakusho, Byakua wears a short-sleeved Captain Haori. 
-                On its back is the Squad 6 emblem:</p>
-                <img src="Images/Appearance/Logo_SquadSix.webp" alt="Logo of Squad 6, Byakuyas Squad">
-            </section>
+                <div id="app-column-3">
+                    <div class="app-text-box">
+                        <h2>Captain Haori</h2>
+                        <p>On top of his regular Shinigami Shihakusho, Byakua wears a short-sleeved Captain Haori.
+                            On its back is the Squad 6 emblem:</p>
+                        <img src="Images/Appearance/Logo_SquadSix.webp" alt="Logo of Squad 6, Byakuyas Squad">
+                    </div>
 
-            <section>
-                <a href="#zanpakuto">
-                    <h3>Zanpakuto</h3>
-                </a>
-                <img src="Images/Appearance/DownArrow_White.png" alt="Down Arrow">
+                    <a href="#zanpakuto">
+                        <h3>Zanpakuto</h3>
+                    </a>
+                    <img src="Images/Appearance/DownArrow_White.png" alt="Down Arrow">
 
-                <a href="#shikai">
-                    <h3>Shikai</h3>
-                </a>
-                <img src="Images/Appearance/DoubleArrow_White.png" alt="Double Down Arrow">
-            </section>
+                    <a href="#shikai">
+                        <h3>Shikai</h3>
+                    </a>
+                    <img src="Images/Appearance/DoubleArrow_White.png" alt="Double Down Arrow">
+                </div>
+            </div>
         </article>
 
         <!-- -------------------------- -->
         <!-- FAMILY SECTION -->
         <article id="family">
             <header>
-                <h1>Family</h1>
-                <section id="rukia">
-                    <img src="Images/Family/SakuraTwig_Cool.png" alt="Sakura Twig with a cool Tone">
-                    <img src="Images/Family/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
-                    <h2>Rukia Kuchiki</h2>
-                    <article>
-                        <img src="Images/Family/Family_Rukia.png" alt="Image of Rukia Kuchiki, Byakuyas adoptive sister">
-                        <p>Rukia is byakuya kuchikis adoptive sister and hisana kuchikis biological sister.
-                        At the beginning of the series, she is intorduced as the vice captain of squad 13 under captain Jūshirō Ukitake. After his passing, she takes charge of the squad and becomes captain herself.
-                        She has a daughter, Ichika, with Renji Abarai, to whom she is married. </p>
-                        <img src="Images/Family/LeftArrow_White.png" alt="Left Arrow">
-                        <img src="Images/Family/RightArrow_White.png" alt="Right Arrow">
-                    </article>
-                </section>
-
-                <section id="hisana">
-                    <img src="Images/Family/SakuraTwig_Cool.png" alt="Sakura Twig with a cool Tone">
-                    <img src="Images/Family/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
-                    <h2>Hisana Kuchiki</h2>
-                    <article>
-                        <img src="Images/Family/Family_Hisana.webp" alt="Image of Hisana Kuchiki, Byakuyas wife">
-                        <p>Hisana kuchiki is byakuyas wife. Due to an illness, she passed away approximately 50 years before the start of the series.
-                        Coming from a very poor sector, she had to leave her sister behind at a very young age to insure her own survival. 
-                        She later asked Byakuya to look over Rukia and become a brother figure to her.</p>
-                        <img src="Images/Family/LeftArrow_White.png" alt="Left Arrow">
-                        <img src="Images/Family/RightArrow_White.png" alt="Right Arrow">
-                    </article>
-                </section>
-
-                <section id="sōjun">
-                    <img src="Images/Family/SakuraTwig_Cool.png" alt="Sakura Twig with a cool Tone">
-                    <img src="Images/Family/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
-                    <h2>Sōjun Kuchiki</h2>
-                    <article>
-                        <img src="Images/Family/Family_Sojun.jpg" alt="Image of Sōjun Kuchiki, Byakuyas biological father">
-                        <p>Sōjun is byakuyas biological father.
-                        He too, passed away before the start of the series. The cause of his death is unknown.
-                        Previously he served as the vice captain of squad 6.</p>
-                        <img src="Images/Family/LeftArrow_White.png" alt="Left Arrow">
-                        <img src="Images/Family/RightArrow_White.png" alt="Right Arrow">
-                    </article>
-                </section>
-
-                <section id="ginrei">
-                    <img src="Images/Family/SakuraTwig_Cool.png" alt="Sakura Twig with a cool Tone">
-                    <img src="Images/Family/SakuraIcon_White.png" alt="Sakura Logo White" width="60" height="60">
-                    <h2>Ginrei Kuchiki</h2>
-                    <article>
-                        <img src="Images/Family/Family_Ginrei.png" alt="Image of Ginrei Kuchiki, Byakuyas biological grandfather">
-                        <p>Ginrei is byakuyas biological grandfather. He also trained him when byakuya was still a child.
-                        About 100 years before the start of the series storyline he was in charge of the Kuchiki Clan and captain of squad 6.</p>
-                        <img src="Images/Family/LeftArrow_White.png" alt="Left Arrow">
-                        <img src="Images/Family/RightArrow_White.png" alt="Right Arrow">
-                    </article>
-                </section>
+                <a href="#home"><img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60"
+                        height="60" class="logo"></a>
             </header>
+
+            <div id="family-frame">
+                <div id="family-slides">
+                    <div class="family-panel" id="rukia">
+                        <article>
+                            <div class="panel-image">
+                                <img src="Images/Family/Family_Rukia.png"
+                                    alt="Image of Rukia Kuchiki, Byakuyas adoptive sister">
+                            </div>
+                            <div class="panel-content">
+                                <h2>Rukia Kuchiki</h2>
+                                <p>Rukia is byakuya kuchikis adoptive sister and hisana kuchikis biological sister.
+                                    At the beginning of the series, she is intorduced as the vice captain of squad 13
+                                    under captain Jūshirō Ukitake. After his passing, she takes charge of the squad and
+                                    becomes captain herself.
+                                    She has a daughter, Ichika, with Renji Abarai, to whom she is married. </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="family-panel" id="hisana">
+                        <article>
+                            <div class="panel-image">
+                                <img src="Images/Family/Family_Hisana.webp"
+                                    alt="Image of Hisana Kuchiki, Byakuyas wife">
+                            </div>
+                            <div class="panel-content">
+                                <h2>Hisana Kuchiki</h2>
+                                <p>Hisana kuchiki is byakuyas wife. Due to an illness, she passed away approximately 50
+                                    years before the start of the series.
+                                    Coming from a very poor sector, she had to leave her sister behind at a very young
+                                    age to insure her own survival.
+                                    She later asked Byakuya to look over Rukia and become a brother figure to her.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="family-panel" id="sōjun">
+                        <article>
+                            <div class="panel-image">
+                                <img src="Images/Family/Family_Sojun.jpg"
+                                    alt="Image of Sōjun Kuchiki, Byakuyas biological father">
+                            </div>
+                            <div class="panel-content">
+                                <h2>Sōjun Kuchiki</h2>
+                                <p>Sōjun is byakuyas biological father.
+                                    He too, passed away before the start of the series. The cause of his death is
+                                    unknown.
+                                    Previously he served as the vice captain of squad 6.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="family-panel" id="ginrei">
+                        <article>
+                            <div class="panel-image">
+                                <img src="Images/Family/Family_Ginrei.png"
+                                    alt="Image of Ginrei Kuchiki, Byakuyas biological grandfather">
+                            </div>
+                            <div class="panel-content">
+                                <h2>Ginrei Kuchiki</h2>
+                                <p>Ginrei is byakuyas biological grandfather. He also trained him when byakuya was still
+                                    a child.
+                                    About 100 years before the start of the series storyline he was in charge of the
+                                    Kuchiki Clan and captain of squad 6.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <button id="prev-button">
+                    <img src="Images/Family/LeftArrow_White.png" alt="Left Arrow">
+                </button>
+
+                <button id="next-button">
+                    <img src="Images/Family/RightArrow_White.png" alt="Right Arrow">
+                </button>
+            </div>
         </article>
 
         <!-- -------------------------- -->
         <!-- ZANPAKUTO SECTION -->
         <article id="zanpakuto">
             <header>
+                <a href="#home"><img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60"
+                        height="60" class="logo"></a>
                 <h1>Zanpakuto</h1>
                 <p>Byakuya's zanpakuto is called Senbonzakura, which translates to "Thousand Cherry Blossoms".</p>
             </header>
 
-            <section id="spirit">
-                <h2>Senbonzakura</h2>
-                <h3>The Samurai</h3>
-                <p>Senbonzakuras personality is similar to his wielders. Most of the time he acts in a relaxed way and speaks in a calm yet cold manner. It seems he is a thoughtful person and never acts carelessly.
-                He also seems to dislike people trying to get through to him. In reality Senbonzakura is very impatient and consequently tends to let others convince him to rash acts. </p>
-                <img src="Images/Zanpakuto/Zanpakuto_Senbonzakura.webp" alt="Image of Senbonzakura, Byakuyas Zanpakuto spirit">
+            <section id="spirit" class="zanpakuto-row">
+                <div class="zanpakuto-image">
+                    <img src="Images/Zanpakuto/Zanpakuto_Senbonzakura.webp" alt="Image of Senbonzakura">
+                </div>
+                <div class="zanpakuto-content">
+                    <h2>Senbonzakura <span>The Samurai</span></h2>
+                    <p>Senbonzakuras personality is similar to his wielders. Most of the time he acts in a relaxed way
+                        and speaks in a calm yet cold manner. It seems he is a thoughtful person and never acts
+                        carelessly.
+                        He also seems to dislike people trying to get through to him. In reality Senbonzakura is very
+                        impatient and consequently tends to let others convince him to rash acts.</p>
+                </div>
             </section>
 
-            <section id="shikai">
-                <h2>Shikai</h2>
-                <h3>,,Chire" - scatter</h3>
-                <p>Upon command ,,scatter" Byakuyas Zanpakutōs blade disperses into a thousand small, pink pieces. All pieces move at a very high speed and are therefore not clearly recognizable. Due to light reflection , they appear to look like a bunch of Sakura petals.
-                The Handle remains in Byakuyas hand and is used by him to control all pieces.</p>
-                <img src="Images/Zanpakuto/Gif_Shikai.gif" alt="GIF of Byakuya using his Shikai, Senbonzakura Chire">
+            <section id="shikai" class="zanpakuto-row row-reverse">
+                <div class="zanpakuto-image">
+                    <img src="Images/Zanpakuto/Gif_Shikai.gif" alt="GIF of Byakuya using his Shikai">
+                </div>
+                <div class="zanpakuto-content">
+                    <h2>Shikai <span>,,Chire" - scatter</span></h2>
+                    <p>Upon command ,,scatter" Byakuyas Zanpakutōs blade disperses into a thousand small, pink pieces.
+                        All pieces move at a very high speed and are therefore not clearly recognizable. Due to light
+                        reflection, they appear to look like a bunch of Sakura petals.
+                        The Handle remains in Byakuyas hand and is used by him to control all pieces.</p>
+                </div>
             </section>
 
-            <section id="bankai">
-                <h2>Bankai</h2>
-                <h3>,,Senbonzakura Kageyoshi" - Vibrant display of a thousand cherry blossoms</h3>
-                <p>Byakuya lets his Zanpakutō fall to the ground, with the blade facing down. Upon impact it starts sinking in the ground and creates a wave pattern on it in the process.
-                Within seconds, the surrounding area turns dark and two rows of giant swords apprear on each side beside Byakuya.
-                Hereinafter the blades scatter into countles pieces, which, as in his Shikai, resmeble Sakura Petals.</p>
-                <img src="Images/Zanpakuto/GIF_Bankai.gif" alt="GIF of Byakuya using his Bankai, Senbonzakura Kageyoshi">
+            <section id="bankai" class="zanpakuto-row row-reverse">
+                <div class="zanpakuto-image">
+                    <img src="Images/Zanpakuto/GIF_Bankai.gif" alt="GIF of Byakuya using his Bankai">
+                </div>
+                <div class="zanpakuto-content">
+                    <h2>Bankai <span>,,Senbonzakura Kageyoshi"</span></h2>
+                    <p>Byakuya lets his Zanpakutō fall to the ground, with the blade facing down. Upon impact it starts
+                        sinking in the ground and creates a wave pattern on it in the process.
+                        Within seconds, the surrounding area turns dark and two rows of giant swords appear on each side
+                        beside Byakuya.
+                        Hereinafter the blades scatter into countless pieces, which, as in his Shikai, resemble Sakura
+                        Petals.</p>
+                </div>
             </section>
         </article>
 
         <!-- -------------------------- -->
         <!-- QUOTE_2 SECTION -->
-        <article id="quote2">
+        <article id="quote2" class="quote">
             <blockquote cite="https://www.ranker.com/list/best-byakuya-kuchiki-quotes/ranker-anime">
                 <p>"The curtain that falls down at the end, shall be pulled down by the blade of my sword."</p>
             </blockquote>
@@ -277,74 +342,95 @@
         <!-- COMBAT SECTION -->
         <article id="combat">
             <header>
-                <img src="Images/Appearance/SakuraIcon_Black.png" alt="Sakura Logo Black" width="60" height="60">
+                <a href="#home"><img src="Images/Appearance/SakuraIcon_Black.png" alt="Sakura Logo Black" width="60"
+                        height="60" class="logo"></a>
                 <h1>Combat Skills</h1>
             </header>
 
-            <section id="hoho">
-                <img src="Images/Combat/Combat_Hoho.jpg" alt="small Image of Byakuya">
-                <h2>Hoho</h2>
-                <p>Byakuya is a Master of Shunpo. His increadible Speed is noticable in each of his fights throughout the Series.</p>
-            </section>
-
-            <section id="kido">
-                <img src="Images/Combat/Combat_Kido.jpg" alt="small Image of Byakuya">
-                <h2>Kido</h2>
-                <p>Byakuya is able to use various Spells, even without saying the required Kotodama-Verse out loud.</p>
-            </section>
-
-            <section id="zanjutsu">
-                <img src="Images/Combat/Combat_Zanjutsu.jpg" alt="small Image of Byakuya">
-                <h2>Zanjutsu</h2>
-                <p>Byakuya is able to control his Bankai with ease and even his Shikai displays a great amount of destructive force.</p>
-            </section>
-
-            <section id="senka">
-                <img src="Images/Combat/Combat_Senka.jpg" alt="small Image of Byakuya">
-                <h2>Senka</h2>
-                <p>A special attack, that Byakuya usues in battle. He stabs his opponent twice, breaking their Soulchain and piercing their Heart.</p>
-            </section>
-
-            <section id="reiatsu">
-                <img src="Images/Combat/Combat_Reiatsu.jpg" alt="small Image of Byakuya">
-                <h2>Reiatsu</h2>
-                <p>Byakuya holds an enormous amount of Spiritual Pressure, matching Kurosaki Ichigo and Kenpachi Zarakis.</p>
-            </section>
-
-            <section id="hakuda">
-                <img src="Images/Combat/Combat_Hakuda.jpg" alt="small Image of Byakuya">
-                <h2>Hakuda</h2>
-                <p>Byakuya is also skilled in hand-to-hand combat, although he prefers to fight with his Zanpakutō.</p>
-            </section>
-
-            <section id="intellect">
-                <img src="Images/Combat/Combat_Intellect.jpg" alt="small Image of Byakuya">
-                <h2>Intellect</h2>
-                <p>Byakuya is highly intelligent and strategic in battle. This allows him quickly to analyze his opponents strengts and weaknesses.</p>
-            </section>
+            <div id="combat-carousel">
+                <div class="combat-card" data-index="0">
+                    <img src="Images/Combat/Combat_Hoho.jpg" alt="Hoho">
+                    <h2>Hoho</h2>
+                    <p>Byakuya is a Master of Shunpo. His incredible Speed is noticeable in each of his fights
+                        throughout the Series.</p>
+                </div>
+                <div class="combat-card" data-index="1">
+                    <img src="Images/Combat/Combat_Kido.jpg" alt="Kido">
+                    <h2>Kido</h2>
+                    <p>Byakuya is able to use various Spells, even without saying the required Kotodama-Verse out loud.
+                    </p>
+                </div>
+                <div class="combat-card" data-index="2">
+                    <img src="Images/Combat/Combat_Zanjutsu.jpg" alt="Zanjutsu">
+                    <h2>Zanjutsu</h2>
+                    <p>Byakuya is able to control his Bankai with ease and even his Shikai displays a great amount of
+                        destructive force.</p>
+                </div>
+                <div class="combat-card" data-index="3">
+                    <img src="Images/Combat/Combat_Senka.jpg" alt="Senka">
+                    <h2>Senka</h2>
+                    <p>A special attack that Byakuya uses in battle. He stabs his opponent twice, breaking their
+                        Soulchain and piercing their Heart.</p>
+                </div>
+                <div class="combat-card" data-index="4">
+                    <img src="Images/Combat/Combat_Reiatsu.jpg" alt="Reiatsu">
+                    <h2>Reiatsu</h2>
+                    <p>Byakuya holds an enormous amount of Spiritual Pressure, matching Kurosaki Ichigo and Kenpachi
+                        Zarakis.</p>
+                </div>
+                <div class="combat-card" data-index="5">
+                    <img src="Images/Combat/Combat_Hakuda.jpg" alt="Hakuda">
+                    <h2>Hakuda</h2>
+                    <p>Byakuya is also skilled in hand-to-hand combat, although he prefers to fight with his Zanpakutō.
+                    </p>
+                </div>
+                <div class="combat-card" data-index="6">
+                    <img src="Images/Combat/Combat_Intellect.jpg" alt="Intellect">
+                    <h2>Intellect</h2>
+                    <p>Byakuya is highly intelligent and strategic in battle. This allows him to quickly analyze his
+                        opponents' strengths and weaknesses.</p>
+                </div>
+            </div>
         </article>
-    </main>
 
-    <!-- -------------------------- -->
-    <!-- FOOTER -->
-    <!-- -------------------------- -->
-    <footer>
-        <article id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form" action="#" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                
-                <input type="submit" value="Send Message">
-            </form>
-        </article>
-    </footer>
+        <!-- -------------------------- -->
+        <!-- FOOTER -->
+        <!-- -------------------------- -->
+        <footer>
+            <div id="footer-content">
+                <div id="footer-left">
+                    <a href="#home"><img src="Images/MainPage/SakuraIcon_White.png" alt="Sakura Logo White" width="60"
+                            height="60" class="logo"></a>
+                    <h2>Byakuya Kuchiki</h2>
+                    <p>Captain of Squad 6 · 28th Head of the Kuchiki Clan</p>
+                    <a href="https://www.instagram.com/whats_happening7/" target="_blank" id="instagram-link">
+                        📷 Follow on Instagram
+                    </a>
+                </div>
+
+                <div id="footer-right">
+                    <article id="contact">
+                        <h2>Contact Me :)</h2>
+                        <form id="contact-form" action="#" method="post">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <input type="submit" value="Send Message">
+                        </form>
+                    </article>
+                </div>
+            </div>
+
+            <div id="footer-bottom">
+                <p>&copy; <span id="copyright-year"></span> Byakuya Kuchiki Fan Site. All Rights Reserved.</p>
+            </div>
+        </footer>
 </body>
 
 </html>

@@ -1,4 +1,728 @@
-body {
+/* ALLGEMEINES */
+*
+{
+    box-sizing: border-box; /* setzt fenstergröße auf die bildschrimgröße und sorgt dafür, dass padding nicht mit widht zusammengenommen wird, sondern in width eingeschlossen ist  */
+}
+
+p
+{
+    font-family: "AlumniSancSC Regular";
+}
+
+.logo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0.5rem;
+}
+
+article 
+{
+    position: relative;
+}
+
+body 
+{
     color: rgb(0, 0, 0);
     margin: 0;
+    overflow-x: hidden; /* alles, was über den rand hinausragt, wird ausgeblendet */
+}
+
+.quote
+{
+    color: white;
+    font-size: 36px;
+    font-family: "Amarante Regular";
+    text-align: center;
+    padding: 1vw;
+}
+
+/* -- -------------------------- -- */
+/* HEADER */
+#site-header 
+{
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #856096;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+#main-nav
+{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+#navigation-list
+{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 5rem;
+}
+
+#navigation-list a
+{
+    text-decoration: none;
+    font-family: "AlumniSancSC Regular";
+    font-size: 40px;
+    color: #ffffff;
+}
+
+/* -- -------------------------- -- */
+/* HOME */
+#home
+    {
+        background-image: url("Images/MainPage/HomePage_Background.jpg"); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* vh = viewport height, wenn auf 100%, scalled das bild auf die größe des Bildschirms */
+        display: flex;
+        position: relative;
+    }
+
+#home h1
+    {
+        color: #ffffff;
+        font-size: 200px;
+        font-family: "Amarante Regular";
+        position: absolute;
+        top: -150px;
+        left: 20px;
+    }
+
+#home h2
+    {
+        color: #ffffff;
+        font-size: 128px;
+        font-family: "Amarante Regular";
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        gap: 2;
+    }
+
+#home #home-text
+    {
+        color: #ffffff;
+        font-size: 36px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+
+/* -- -------------------------- -- */
+/* ABOUT */
+#about
+{
+    background-color: #000000;
+    position: relative;
+    display: flex;
+}
+
+#left-side-image
+{
+    flex: 0 0 250px;
+    padding: 4rem;
+}
+
+
+#right-side-content
+{
+    padding-top: 3rem;
+    color: #ffffff;
+    font-family:"AlumniSancSC Regular";
+    font-size: 36px;
+    flex: 1;
+    align-items: center;
+}
+
+#right-side-content h1
+{
+    font-family: "Amarante Regular";
+    font-size: 96px;
+    margin-top: 0;
+}
+
+#tables
+{
+    display: flex;
+    gap: 2rem;
+}
+
+/* -- -------------------------- -- */
+/* QUOTE1 */
+#quote1
+{
+    background-color: #37304D;
+}
+
+/* -- -------------------------- -- */
+/* APPEARANCE */
+#appearance
+{
+    background: radial-gradient(circle, #000000 0%, #e7edee 100%);
+}
+
+#image-container
+{
+    position: relative; 
+}
+
+.base-image
+{
+    display: block;
+    width: 100%;
+}
+
+/* #app-head-piece, #app-scarf, #app-shikai, #app-senpakuto, #app-coat
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+#app-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr; /* Makes the center column wider */
+    gap: 2rem;
+    padding: 2rem;
+    align-items: stretch; /* Allows columns to fill the full height */
+}
+
+#app-column-1
+{
+justify-content: flex-end;
+}
+
+#app-column-1, #app-column-3
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Removed align-self: start; from here! */
+}
+
+#app-column-3 a[href="#zanpakuto"]
+{
+    margin-top: auto; 
+}
+
+#app-column-3 a, #app-column-3 img[alt*="Arrow"]
+{
+    align-self: flex-end;
+    text-align: right;
+    text-decoration: none;
+    color: #000; /* Ensure the text stays visible */
+    font-family: "AlumniSancSC Regular";
+    font-size: 48px;
+}
+
+.app-text-box
+{
+    background-color: #e7addf81;
+    padding: 1rem;
+    border: 2px solid #6B558E;
+    font-family: "AlumniSancSC Regular";
+    font-size: 24px;
+    color: #000000;
+    flex-grow: 0; /* prevent boxes from growing */
+    flex-shrink: 0; /* prevent boxes from shrinking */
+}
+
+.app-text-box img
+{
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 1rem auto; /* centers it horizontally */
+}
+
+.app-text-box h2
+{
+    font-family: "Amaranth Regular";
+    font-size: 64px;
+    color: #ffffff;
+    margin: 1rem auto;
+}
+
+/* -- -------------------------- -- */
+/* FAMILY */
+#family header
+{
+    background-color: transparent;
+}
+
+#family
+{
+    background-color: #282E52;
+    position: relative;
+    overflow: hidden;
+}
+
+#family-frame
+{
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 4rem 2rem;
+    min-height: 800px; /* consistent frame height */
+}
+
+.family-panel
+{
+    min-width: 100%;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.family-panel article
+{
+    display: flex;
+    gap: 2rem;
+    background: linear-gradient(139deg, #ffffff36 0%, #49516f38 46%, #ffffff36 99%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 0 4rem;
+    position: relative;
+    z-index: 1;
+    height: 700px; /* fixed height for all panels */
+    align-items: center; /* vertically center content */
+}
+
+.panel-image
+{
+    flex: 0 0 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.panel-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* keeps image proportions without cropping */
+}
+
+.panel-content h2
+{
+    font-family: "Amarante Regular";
+    font-size: 96px;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.panel-content p
+{
+    font-family: "AlumniSancSC Regular";
+    font-size: 40px;
+    color: #ffffff;
+}
+
+#prev-button, #next-button
+{
+    position: absolute;
+    bottom: 45%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#prev-button { left: 1rem; }
+#next-button { right: 1rem; }
+
+#prev-button img, #next-button img
+{
+    width: 40px;
+    height: auto;
+}
+
+#family-slides
+{
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* -- -------------------------- -- */
+/* ZANPAKUTO */
+#zanpakuto
+{
+    background-color: #000000;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+#zanpakuto header
+{
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: transparent;
+}
+
+#zanpakuto header h1
+{
+    font-family: "Amarante Regular";
+    font-size: 96px;
+    color: #ffffff;
+    margin: 0;
+}
+
+#zanpakuto header p
+{
+    font-family: "AlumniSancSC Regular";
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.zanpakuto-row
+{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 2rem;
+}
+
+.row-reverse
+{
+    flex-direction: row-reverse;
+}
+
+.zanpakuto-image
+{
+    flex: 0 0 500px;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.zanpakuto-image img
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.zanpakuto-content
+{
+    flex: 1;
+}
+
+.zanpakuto-content h2
+{
+    font-family: "Amaranth Regular";
+    font-size: 64px;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.zanpakuto-content h2 span
+{
+    font-family: "Amaranth Regular";
+    font-size: 40px;
+    color: #856096;
+    margin-left: 1rem;
+}
+
+.zanpakuto-content p
+{
+    font-family: "AlumniSancSC Regular";
+    font-size: 40px;
+    line-height: 1.6;
+}
+
+.row-reverse .zanpakuto-content
+{
+    text-align: right;
+}
+
+/* -- -------------------------- -- */
+/* QUOTE2 */
+#quote2
+{
+    background-color: #614B84;
+}
+
+/* -- -------------------------- -- */
+/* COMBAT */
+#combat
+{
+    background: radial-gradient(circle, #4b319a 0%, #e7edee 100%);
+    padding: 2rem;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#combat header
+{
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 3rem;
+}
+
+#combat header h1
+{
+    font-family: "Amarante Regular";
+    font-size: 96px;
+    color: #ffffff;
+    margin: 0;
+}
+
+#combat-carousel
+{
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none; /* prevents text selection while dragging */
+}
+
+#combat-carousel.dragging
+{
+    cursor: grabbing;
+}
+
+.combat-card
+{
+    position: absolute;
+    width: 400px;
+    background-color: rgba(40, 30, 80, 0.85);
+    padding: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    font-family: "AlumniSancSC Regular";
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.combat-card img
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.combat-card h2
+{
+    font-family: "Amarante Regular";
+    font-size: 64px;
+    margin: 0.5rem 0;
+}
+
+.combat-card p
+{
+    font-size: 30px;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.8s ease;
+}
+
+.combat-card.active
+{
+    transform: translateX(0) scale(1.1);
+    z-index: 5;
+    background-color: rgba(60, 45, 110, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    pointer-events: auto;
+}
+
+.combat-card.active p
+{
+    opacity: 1;
+    max-height: 300px;
+}
+
+.combat-card.prev-1,
+.combat-card.next-1
+{
+    z-index: 4;
+    opacity: 0.75;
+    pointer-events: auto;
+}
+
+.combat-card.prev-1 { transform: translateX(-460px) scale(0.85); }
+.combat-card.next-1 { transform: translateX(460px) scale(0.85); }
+
+.combat-card.hidden
+{
+    opacity: 0 !important;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(920px) scale(0.7); /* parked off to the right */
+}
+
+/* -- -------------------------- -- */
+/* FOOTER */
+footer
+{
+    background-color: #1a1625;
+    color: #ffffff;
+    padding: 4rem 2rem 0 2rem;
+}
+
+#footer-content
+{
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#footer-left
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#footer-left h2
+{
+    font-family: "Amarante Regular";
+    font-size: 48px;
+    margin: 0;
+    color: #ffffff;
+}
+
+#footer-left p
+{
+    font-family: "AlumniSancSC Regular";
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+#instagram-link
+{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #856096;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "AlumniSancSC Regular";
+    font-size: 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+#instagram-link:hover
+{
+    background-color: #6B558E;
+}
+
+#footer-right
+{
+    flex: 1;
+}
+
+#footer-right h2
+{
+    font-family: "Amarante Regular";
+    font-size: 48px;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+#contact-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#contact-form label
+{
+    font-family: "AlumniSancSC Regular";
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea
+{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: "AlumniSancSC Regular";
+    font-size: 18px;
+}
+
+#contact-form input[type="submit"]
+{
+    padding: 1rem 2rem;
+    background-color: #856096;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-family: "AlumniSancSC Regular";
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+#contact-form input[type="submit"]:hover
+{
+    background-color: #6B558E;
+}
+
+#footer-bottom
+{
+    text-align: center;
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "AlumniSancSC Regular";
+    font-size: 16px;
+}
+
+/* -- -------------------------- -- */
+/* FONTS */
+@font-face
+{
+    font-family: "Amarante Regular";
+    src: url("Fonts/Amarante/Amarante-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: "Amaranth Regular";
+    src: url("Fonts/Amaranth/Amaranth-Regular.ttf");
+}
+
+@font-face 
+{
+    font-family: "AlumniSancSC Regular";
+    src: url("Fonts/Alumni_Sans_SC/static/AlumniSansSC-Regular.ttf");
 }
